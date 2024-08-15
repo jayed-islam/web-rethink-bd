@@ -118,7 +118,7 @@ const Header = () => {
                   </div>
 
                   {/* Mega Menu */}
-                  <div className="absolute left-0 p-4 bg-white shadow-lg rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 min-w-[25rem] w-full">
+                  <div className="absolute left-0 p-4 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 min-w-[25rem] w-full">
                     <div className="grid grid-cols-2 gap-10 w-full">
                       {menu.categories.map((category, idx) => (
                         <div key={idx}>
