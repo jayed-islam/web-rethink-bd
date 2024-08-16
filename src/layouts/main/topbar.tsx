@@ -7,6 +7,8 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 import bd from "../../../public/assets/bd.png";
 import usa from "../../../public/assets/usa.png";
+import fb from "../../../public/assets/facee.png";
+import yt from "../../../public/assets/youtubb.png";
 
 const languages = [
   { name: "English", image: usa },
@@ -24,6 +26,8 @@ const Topbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const social = [yt, fb];
 
   const open = Boolean(anchorEl);
   const popoverId = open ? "language-popover" : undefined;
@@ -93,16 +97,11 @@ const Topbar = () => {
         </div>
 
         {/* Right Side Menu Items */}
-        <div className="flex items-center space-x-6">
-          <div className="cursor-pointer text-sm hover:text-gray-500 duration-400">
-            Account
-          </div>
-          <div className="cursor-pointer text-sm hover:text-gray-500 duration-500">
-            Sign In
-          </div>
-          <div className="cursor-pointer text-sm hover:text-gray-500 duration-500">
-            Help
-          </div>
+        <div className="flex items-center space-x-3">
+          <h2 className="text-xs">সামাজিক যোগাযোগ:</h2>
+          {social.map((item) => (
+            <Image src={item} className="w-4 cursor-pointer" alt="image" />
+          ))}
         </div>
       </div>
     </div>

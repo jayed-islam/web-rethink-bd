@@ -1,13 +1,21 @@
 "use client";
 
 import React, { useState } from "react";
-import { MenuItem, Select, SelectChangeEvent, TextField } from "@mui/material";
+import {
+  IconButton,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  TextField,
+} from "@mui/material";
 import { ExpandMore, Search, Notifications } from "@mui/icons-material";
 import { deptType, notices, officeType } from "@/constants";
 import { CgMenuRight } from "react-icons/cg";
 import useBoolean from "@/hooks/use-boolean";
 import { configNavigationMenu } from "./config-navigation";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { AiOutlineSound } from "react-icons/ai";
+import MobileSidebarView from "./mobile-sidebar";
 
 const Header = () => {
   const [district, setDistrict] = useState<string | null>(null);
@@ -23,6 +31,8 @@ const Header = () => {
   };
 
   const noticeState = useBoolean();
+
+  const drawer = useBoolean();
 
   return (
     <div>
@@ -56,20 +66,25 @@ const Header = () => {
                 ))}
               </Select>
 
-              <Select
-                value={subDistrict || ""}
-                onChange={handleSubDistrictChange}
-                displayEmpty
-                className="w-full md:min-w-[13rem] h-[3rem] rounded-none"
-                disabled={!district}
-              >
-                <MenuItem value="" disabled>
-                  মন্ত্রণালয় নির্বচন করুন
-                </MenuItem>
-                {deptType.map((item, index) => (
-                  <MenuItem value={item.value}>{item.label}</MenuItem>
-                ))}
-              </Select>
+              <div className="flex items-center gap-2 flex-row w-full">
+                <Select
+                  value={subDistrict || ""}
+                  onChange={handleSubDistrictChange}
+                  displayEmpty
+                  className="w-full md:min-w-[13rem] h-[3rem] rounded-none"
+                  disabled={!district}
+                >
+                  <MenuItem value="" disabled>
+                    মন্ত্রণালয় নির্বচন করুন
+                  </MenuItem>
+                  {deptType.map((item, index) => (
+                    <MenuItem value={item.value}>{item.label}</MenuItem>
+                  ))}
+                </Select>
+                <div className="bg-lime-500 w-[3.5rem] h-[3rem] flex items-center justify-center cursor-pointer text-white">
+                  GO
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -78,14 +93,19 @@ const Header = () => {
         <div className="bg-[#0e7346] h-[3rem]">
           <div className="flex items-center justify-start max-w-[81rem] mx-auto h-full">
             <div className="h-full relative z-30 px-5 md:px-0">
-              <div
-                className="flex items-center space-x-2 cursor-pointer w-full md:w-[21rem] bg-lime-500 h-full px-5 justify-between"
-                onClick={noticeState.toggle}
-              >
-                <h2 className="font-semibold text-lg text-white">
-                  নোটিশ বোর্ড
-                </h2>
-                <CgMenuRight className="text-white text-2xl" />
+              <div className="h-full w-full flex items-center gap-7 justify-between">
+                <div
+                  className="flex items-center space-x-2 cursor-pointer w-full md:w-[21rem] bg-lime-500 h-full px-5 justify-between"
+                  onClick={noticeState.toggle}
+                >
+                  <h2 className="font-semibold text-lg text-white">
+                    নোটিশ বোর্ড
+                  </h2>
+                  <AiOutlineSound className="text-white text-2xl" />
+                </div>
+                <IconButton className="md:hidden" onClick={drawer.setTrue}>
+                  <CgMenuRight className="text-white text-3xl" />
+                </IconButton>
               </div>
 
               <div
@@ -145,6 +165,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      <MobileSidebarView drawer={drawer} />
     </div>
   );
 };

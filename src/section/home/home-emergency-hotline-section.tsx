@@ -18,7 +18,7 @@ const HomeEmergencyHotlineSection = () => {
               key={index}
               className="bg-gray-100 p-5 flex items-start space-x-4 border border-transparent hover:border-lime-500 transition-all duration-500 cursor-pointer"
             >
-              <FiPhoneCall className="text-green-600 text-3xl flex-shrink-0" />
+              <FiPhoneCall className="text-lime-500 text-3xl flex-shrink-0" />
               <div>
                 <h3 className="text-2xl font-semibold text-gray-800">
                   ☎ {hotline.number}
