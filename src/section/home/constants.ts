@@ -11,9 +11,15 @@ import rulesBook from "../../../public/assets/rules.png";
 import nagorik from "../../../public/assets/nagorik-e.png";
 import shebaProdan from "../../../public/assets/sheba_prodan.jpg";
 import udvaboni from "../../../public/assets/udvaboni.png";
-import shebaProdan from "../../../public/assets/sheba_prodan.jpg";
+import barshik from "../../../public/assets/barshik.png";
 import sheba_shojikoron from "../../../public/assets/sheba_shojikoron.png";
-import shebaProdan from "../../../public/assets/sheba_prodan.jpg";
+import sdg from "../../../public/assets/sdg.png";
+import form from "../../../public/assets/from.jpg";
+import press from "../../../public/assets/prress.jpg";
+import bajet from "../../../public/assets/bajet.png";
+import ayeen from "../../../public/assets/aayen.jpg";
+import bibidho from "../../../public/assets/bibidho.jpg";
+import social_security from "../../../public/assets/social.png";
 
 export const leader = [
   {
@@ -237,7 +243,7 @@ export const homeSection = [
   },
   {
     title: "বার্ষিক কর্মসম্পাদন চুক্তি",
-    image: our_subjects,
+    image: barshik,
     items: [
       "নির্দেশিকা/পরিপত্র/এপিএ টিম/ ফোকাল পয়েন্ট",
       "বার্ষিক কর্মসম্পাদন চুক্তি ও ফলাফল",
@@ -247,7 +253,7 @@ export const homeSection = [
   },
   {
     title: "বাজেট ও প্রকল্প",
-    image: our_subjects,
+    image: bajet,
     items: [
       "বার্ষিক ক্রয় পরিকল্পনা",
       "বাজেট ও এমটিবিএফ বাজেট",
@@ -257,7 +263,7 @@ export const homeSection = [
   },
   {
     title: "এসডিজি ও উন্নয়ন কর্মপরিকল্পনা",
-    image: our_subjects,
+    image: sdg,
     items: [
       "মন্ত্রণালয়/বিভাগের এসডিজি",
       "এসডিজি ফোকাল / বিকল্প ফোকাল পয়েন্ট",
@@ -267,7 +273,7 @@ export const homeSection = [
   },
   {
     title: "ফরমসমূহ",
-    image: our_subjects,
+    image: form,
     items: [
       "সাংবাদিক কল্যাণ তহবিল আবেদন",
       "সকল সরকারি ফরম",
@@ -298,7 +304,7 @@ export const homeSection = [
   },
   {
     title: "আইন/নীতিমালা",
-    image: miscellaneous,
+    image: ayeen,
     items: [
       "জাতীয় সম্প্রচার নীতিমালা",
       "ক্যাবল টিভি বিধিমালা-২০১০",
@@ -308,7 +314,7 @@ export const homeSection = [
   },
   {
     title: "বিবিধ",
-    image: miscellaneous,
+    image: bibidho,
     items: ["বার্ষিক প্রতিবেদন", "টেন্ডার", "ফটোগ্যালারী", "অন্যান্য"],
   },
 ];
