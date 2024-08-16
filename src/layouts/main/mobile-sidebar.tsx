@@ -1,11 +1,14 @@
 import { BooleanState } from "@/types/utils";
-import { Drawer, IconButton } from "@mui/material";
+import { Drawer, IconButton, Tooltip } from "@mui/material";
 import React, { useState } from "react";
 import { configNavigationMenu } from "./config-navigation";
 import { FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import logo from "../../../public/assets/bd-logo.png";
 import Image from "next/image";
+import motamotImage from "../../../public/assets/motamot.gif";
+import pollIcon from "../../../public/assets/poll-icon.gif";
+import acceci from "../../../public/assets/acceebility.svg";
 
 type ExpandedMenusState = {
   [key: number]: boolean;
@@ -24,6 +27,21 @@ const MobileSidebarView: React.FC<Props> = ({ drawer }) => {
       [index]: !prevState[index],
     }));
   };
+
+  const sideIcons = [
+    {
+      image: motamotImage,
+      title: "মতামত",
+    },
+    {
+      image: pollIcon,
+      title: "পোলিং",
+    },
+    {
+      image: acceci,
+      title: "Accessibility",
+    },
+  ];
 
   return (
     <Drawer open={drawer.value} onClose={drawer.toggle}>
@@ -75,6 +93,16 @@ const MobileSidebarView: React.FC<Props> = ({ drawer }) => {
             </div>
           ))}
         </nav>
+
+        <div className="flex item gap-3">
+          {sideIcons.map((item) => (
+            <div className="cursor-pointer">
+              <Tooltip title={item.title}>
+                <Image src={item.image} alt="" className="w-9" />
+              </Tooltip>
+            </div>
+          ))}
+        </div>
       </div>
     </Drawer>
   );

@@ -5,7 +5,7 @@ import { FaCheck } from "react-icons/fa";
 const nationalAnthem = {
   title: "বাংলাদেশের জাতীয় সংগীত",
   description: "ক্লিক করুন নিচের প্লে বাটনে বাংলাদেশের জাতীয় সংগীত শুনতে।",
-  audioSrc: "/assets/amar-sonar-bangla-national-anthem-of-bangladesh.mp3",
+  audioSrc: "/assets/audio/amar-sonar-bangla-national-anthem-of-bangladesh.mp3",
 };
 
 const innovationCornerItems = [
