@@ -30,8 +30,8 @@ To set up the Web Rethink BD project locally, follow these steps:
 
 Before you begin, ensure you have installed:
 
-- [Node.js](https://nodejs.org) (version X.X.X)
-- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/) (version X.X.X)
+- [Node.js](https://nodejs.org)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
 ### Installation Steps
 
