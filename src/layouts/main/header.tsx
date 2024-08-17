@@ -57,10 +57,10 @@ const Header = () => {
   return (
     <div>
       <header className="bg-white">
-        <div className="flex flex-col lg:flex-row justify-between items-center py-7 max-w-[81rem] mx-auto px-5 xl:px-0">
+        <div className="flex flex-col xl:flex-row justify-between items-center py-7 max-w-[81rem] mx-auto px-5 xl:px-0 gap-5">
           <h1 className="text-xl font-bold">বাংলাদেশ জাতীয় তথ্য বাতায়ন</h1>
 
-          <div className="mt-5 md:mt-0 flex items-center flex-col gap-5 md:flex-row w-full md:w-auto px-5 xl:px-0">
+          <div className=" flex items-center flex-col gap-5 md:flex-row w-full md:w-auto px-5 xl:px-0">
             <div className=" flex items-center w-full lg:min-w-[25rem]">
               <input
                 placeholder="Search..."
